@@ -1,0 +1,295 @@
+@import url('https://fontlibrary.org/face/orkney');
+
+/* Note: using .sui with .pal means you are using Statik's main palette*/
+
+/* P A L E T T E */
+.sui.pal {
+
+  /* Basics */
+  --main-color: #3C3D40;
+  --main-bg: white;
+  --primary: #2979ff;
+  --primary-light: #c7dcff;
+  --main-font: 'OrkneyRegular';
+  /* Navigation */
+  --nav-color: #212121;
+  --nav-bg: #212121;
+  --menu-bg: ;
+  /* Typography */
+  --title-color: #212121;
+  --subtitle-color: var(--title-color);
+  --subtitle-opacity: 70%;
+
+
+}
+
+
+/* M A I N*/
+
+body.sui {
+  background-color: var(--main-bg);
+  color: var(--main-color);
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font), 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  max-width: 97%;
+}
+
+.sui.main {
+  padding: 0;
+  padding-top: 5rem;
+  margin-left: 3%;
+}
+
+html.sui.pal::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  opacity: 50;
+}
+
+/* N A V I G A T I O N */
+
+.header.sui,
+.sui.nav {
+  background-color: var(--nav-bg);
+  color: var(--nav-color);
+  position: fixed;
+  margin: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 100%;
+  z-index: 1;
+}
+
+.sui.brand {
+  letter-spacing: 0.2rem;
+}
+
+.sui.menu {
+  margin: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--menu-bg);
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+  padding-top: 50px;
+}
+
+.sui.menu .sui.container {
+  left: 25px;
+}
+
+.header.sui a,
+.nav.sui a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* T Y P O G R A P H Y */
+
+.sui.uppercase {
+  text-transform: uppercase;
+}
+
+.sui.title {
+  letter-spacing: 0.075rem;
+  color: var(--title-color);
+}
+
+.sui.subtitle {
+  color: var(--subtitle-color);
+  opacity: var(--subtitle-opacity);
+}
+
+body.sui.pal>p {
+  opacity: 85;
+}
+
+/* C O N T S */
+
+.sui.img {
+  min-width: 25%;
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.sui.blurbg {
+  background-color: #fafafa;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+}
+
+
+
+/* BY SIMPLEGRID.IO */
+/* ==== GRID SYSTEM ==== */
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.col-1-sm {
+  width: 4.33%;
+}
+
+.col-2-sm {
+  width: 12.66%;
+}
+
+.col-3-sm {
+  width: 21%;
+}
+
+.col-4-sm {
+  width: 29.33%;
+}
+
+.col-5-sm {
+  width: 37.66%;
+}
+
+.col-6-sm {
+  width: 46%;
+}
+
+.col-7-sm {
+  width: 54.33%;
+}
+
+.col-8-sm {
+  width: 62.66%;
+}
+
+.col-9-sm {
+  width: 71%;
+}
+
+.col-10-sm {
+  width: 79.33%;
+}
+
+.col-11-sm {
+  width: 87.66%;
+}
+
+.col-12-sm {
+  width: 96%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+@media only screen and (min-width: 33.75em) {
+
+  /* 540px */
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+
+  /* 720px */
+  .col-1 {
+    width: 4.33%;
+  }
+
+  .col-2 {
+    width: 12.66%;
+  }
+
+  .col-3 {
+    width: 21%;
+  }
+
+  .col-4 {
+    width: 29.33%;
+  }
+
+  .col-5 {
+    width: 37.66%;
+  }
+
+  .col-6 {
+    width: 46%;
+  }
+
+  .col-7 {
+    width: 54.33%;
+  }
+
+  .col-8 {
+    width: 62.66%;
+  }
+
+  .col-9 {
+    width: 71%;
+  }
+
+  .col-10 {
+    width: 79.33%;
+  }
+
+  .col-11 {
+    width: 87.66%;
+  }
+
+  .col-12 {
+    width: 96%;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+
+  /* 960px */
+  .container {
+    width: 75%;
+    max-width: 60rem;
+  }
+}
