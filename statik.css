@@ -109,6 +109,13 @@ html.sui.pal::-webkit-scrollbar-thumb {
   opacity: var(--subtitle-opacity);
 }
 
+.sui.supersubtitle {
+  opacity: 75;
+  font-weight: lighter;
+  letter-spacing: 0.15rem;
+  word-spacing: 0.25rem;
+}
+
 body.sui.pal>p {
   opacity: 85;
 }
