@@ -114,6 +114,7 @@ html.sui.pal::-webkit-scrollbar-thumb {
   font-weight: lighter;
   letter-spacing: 0.15rem;
   word-spacing: 0.25rem;
+  text-transform: uppercase;
 }
 
 body.sui.pal>p {
