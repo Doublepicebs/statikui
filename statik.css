@@ -1,4 +1,4 @@
-@import url('https://fontlibrary.org/face/orkney');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 /* Note: using .sui with .pal means you are using Statik's main palette*/
 
@@ -10,7 +10,7 @@
   --main-bg: white;
   --primary: #2979ff;
   --primary-light: #c7dcff;
-  --main-font: 'OrkneyRegular';
+  --main-font: 'Lato';
   /* Navigation */
   --nav-color: #212121;
   --nav-bg: #e0e0e0;
@@ -21,8 +21,12 @@
   --subtitle-opacity: 70%;
   /* Misc */
   --shadow-color: #bdbdbd;
-
-
+  /* Alert */
+  --alert-border-radius: 6px;
+  --alert-bg: var(--primary-light);
+  --alert-color: #212121;
+  /* Buttons */
+  --btn-border-radius: 5px;
 }
 
 
@@ -141,6 +145,29 @@ body.sui.pal>p {
   box-shadow: 6 10 5 8 var(--shadow-color);
 }
 
+.sui.alert {
+  background-color: var(--alert-bg);
+  color: var(--alert-color);
+  padding: 8px;
+  border-radius: var(--alert-border-radius);
+  margin-right: 3%; /*to be symmetric with .main 's margin left*/
+}
+
+
+/* L I N K S ... */
+
+.sui.btn {
+  border-radius: var(--btn-border-radius);
+  outline: none;
+  text-decoration: none;
+  padding: 5px; 
+  margin: 3px;
+}
+
+.sui.btn.primary {
+  background-color: var(--primary);
+  color: var(--color);
+}
 
 
 /* BY SIMPLEGRID.IO */

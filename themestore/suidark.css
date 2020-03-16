@@ -1,0 +1,24 @@
+.sui.cst {
+  /* Basics */
+  --main-color: #fafafa;
+  --main-bg: #3C3D40;
+  --primary: #2979ff;
+  --primary-light: #c7dcff;
+  --main-font: 'Lato';
+  /* Navigation */
+  --nav-color: white;
+  --nav-bg: #424242;
+  --menu-bg: #424242;
+  /* Typography */
+  --title-color: white;
+  --subtitle-color: var(--title-color);
+  --subtitle-opacity: 70%;
+  /* Misc */
+  --shadow-color: none;
+  /* Alert */
+  --alert-border-radius: 6px;
+  --alert-bg: #424242;
+  --alert-color: #fafafa;
+  /* Button */
+  --btn-border-radius: 5px;
+}
