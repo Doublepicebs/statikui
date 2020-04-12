@@ -146,6 +146,11 @@ body.sui.pal>p {
 /* U T I L I T I E S */
 
 
+.sui.shadow {
+  -webkit-box-shadow: 10px 10px 45px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 45px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 45px -20px rgba(0, 0, 0, 0.75);
+}
 
 .sui.rounded {
   border-radius: 4px;
@@ -197,10 +202,10 @@ body.sui.pal>p {
   color: var(--primary);
   text-decoration-color: var(--primary-light);
   padding-bottom: 3px;
-  transition: all 0.5s;
 }
 
 .sui.link:hover {
+  transition: all 0.5s;
   color: var(--primary);
   text-decoration-color: transparent;
   opacity: 75%;
