@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fontlibrary.org/face/fantasque-sans-mono');
 
 /* Note: using .sui with .pal means you are using Statik's main palette*/
 
@@ -9,8 +10,11 @@
   --main-color: #3C3D40;
   --main-bg: white;
   --primary: #2979ff;
+  --secondary: #3c3d40;
+  --code-color: #fafafa;
   --primary-light: #c7dcff;
   --main-font: 'Lato';
+  --code-font: 'FantasqueSansMonoRegular';
   /* Navigation */
   --nav-color: #212121;
   --nav-bg: #e0e0e0;
@@ -21,12 +25,14 @@
   --subtitle-opacity: 70%;
   /* Misc */
   --shadow-color: #bdbdbd;
-  /* Alert */
+  /* Alert / Card */
   --alert-border-radius: 6px;
   --alert-bg: var(--primary-light);
   --alert-color: #212121;
+  --card-bg: #eeeee;
   /* Buttons */
   --btn-border-radius: 5px;
+  --btn-primary-color: white;
 }
 
 
@@ -40,6 +46,8 @@ body.sui {
   margin: 0;
   font-family: var(--main-font), 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   max-width: 97%;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .sui.main {
@@ -79,7 +87,7 @@ html.sui.pal::-webkit-scrollbar-thumb {
   right: 0;
   height: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--menu-bg);
   overflow: hidden;
   transition: 0.25s ease-in-out;
@@ -126,6 +134,33 @@ body.sui.pal>p {
   opacity: 85;
 }
 
+.sui.code {
+  font-family: var(--code-font) !important;
+  width: 90%;
+  overflow-x: scroll;
+  background-color: var(--secondary);
+  color: var(--code-color);
+}
+
+
+/* U T I L I T I E S */
+
+
+
+.sui.rounded {
+  border-radius: 4px;
+}
+
+.sui.rounded-sm,
+.sui.rounded[data-sui-size="sm"] {
+  border-radius: 2px;
+}
+
+.sui.rounded-lg,
+.sui.rounded[data-sui-size="lg"] {
+  border-radius: 6px;
+}
+
 /* C O N T S */
 
 .sui.img {
@@ -141,8 +176,10 @@ body.sui.pal>p {
   backdrop-filter: blur(5px);
 }
 
-.sui.shadow {
-  box-shadow: 6 10 5 8 var(--shadow-color);
+.sui.card {
+  background-color: var(--card-bg);
+  padding: 5px;
+  margin: 3px;
 }
 
 .sui.alert {
@@ -156,17 +193,64 @@ body.sui.pal>p {
 
 /* L I N K S ... */
 
+.sui.link {
+  color: var(--primary);
+  text-decoration-color: var(--primary-light);
+  padding-bottom: 3px;
+  transition: all 0.5s;
+}
+
+.sui.link:hover {
+  color: var(--primary);
+  text-decoration-color: transparent;
+  opacity: 75%;
+}
+
+.sui.menu a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.sui.menu .active {
+  font-weight: bolder;
+  border-left: solid 2px var(--primary);
+}
+
+.sui.menu.blurbg a {
+  font-weight: bolder;
+}
+
 .sui.btn {
   border-radius: var(--btn-border-radius);
   outline: none;
   text-decoration: none;
   padding: 5px; 
-  margin: 3px;
+  display: inline-block;
+  margin: 5px;
+}
+
+button .sui.btn {
+  display: inline-block;
+  border-style: none;
+  border-color: transparent;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.sui.btn.full {
+  box-sizing: border-box;
+  width: 90%;
+  margin: 5;
+  padding: 4;
+  text-align: center;
+  padding-top: 8px; 
+  padding-bottom: 8px;
 }
 
 .sui.btn.primary {
   background-color: var(--primary);
-  color: var(--color);
+  color: var(--btn-primary-color);
 }
 
 
